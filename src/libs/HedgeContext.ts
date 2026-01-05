@@ -1,7 +1,7 @@
 import type { ResponseLabels } from "./hedgedFetch";
 import type { IHedgeBucket } from "./interfaces/IHedgeBucket";
 import type { IHedgeFetchOptions } from "./interfaces/IHedgeFetchOptions";
-import type { LatencyTracker } from "./LatencyTracket2";
+import type { LatencyTracker } from "./LatencyTracket";
 
 export class HedgedContext {
 
