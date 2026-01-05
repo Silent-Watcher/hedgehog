@@ -1,5 +1,5 @@
 {
-	"name": "hedgehog",
+	"name": "hedge-fetch",
 	"version": "0.9.0",
 	"description": "An adaptive, speculative request-hedging library that automatically cuts p95 tail latency.",
 	"main": "dist/index.js",

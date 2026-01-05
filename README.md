@@ -1,4 +1,4 @@
-# 🦔 hedgehog
+# hedge-fetch
 
 **Adaptive, speculative request hedging for the modern web.** `hedgehog-fetch` is a high-performance wrapper around the Fetch API designed to eliminate "tail latency" (the slow P95/P99 requests). By intelligently firing a second "speculative" request when the first one takes too long, Hedgehog ensures your users never wait on a stray slow server.
 
@@ -15,14 +15,13 @@
 ## Installation
 
 ```bash
-npm install hedgehog
-
+npm install hedge-fetch
 ```
 
 ## Quick Start
 
 ```typescript
-import { HedgedContext, LocalTokenBucket, LatencyTracker } from 'hedgehog';
+import { HedgedContext, LocalTokenBucket, LatencyTracker } from 'hedge-fetch';
 
 // 1. Initialize the context
 const hedge = new HedgedContext(
@@ -33,7 +32,7 @@ const hedge = new HedgedContext(
 // 2. Use it just like native fetch
 const response = await hedge.fetch('https://api.example.com/data', {
   timeoutMs: 5000, // Global safety net
-  onHedge: () => console.log('🦔 Hedging triggered!')
+  onHedge: () => console.log('Hedging triggered!')
 });
 
 // 3. Check if the hedge saved the day
